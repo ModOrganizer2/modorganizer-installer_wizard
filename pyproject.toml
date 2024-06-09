@@ -60,3 +60,4 @@ exclude = ["lib", "venv", "src/ui"]
 typeCheckingMode = "strict"
 reportMissingTypeStubs = true
 reportMissingModuleSource = false
+pythonPlatform = "Windows"
