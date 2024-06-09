@@ -19,5 +19,14 @@ jobs:
       - uses: abatilo/actions-poetry@v2
       - name: Install package
         run: poetry install
+
+      # generate UI file for linting
+      - name: Generate UI files
+        shell: pwsh
+        run: |
+          Get-ChildItem -Recurse -File -Include "*.ui" | ForEach-Object {
+            poetry run pyuic6 $_ -o ([io.path]::ChangeExtension($_.FullName, "py"))
+          }
+
       - name: Lint
         run: poetry run poe lint
