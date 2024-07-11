@@ -10,8 +10,16 @@ jobs:
   build:
     runs-on: windows-2022
     steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - uses: actions/checkout@v4
-      - uses: lukka/run-vcpkg@v11
+
+      - name: "Set environmental variables"
+        shell: bash
+        run: |
+          echo "VCPKG_ROOT=$VCPKG_INSTALLATION_ROOT" >> $GITHUB_ENV
 
       - name: Configure Installer Wizard Plugin build
         shell: pwsh
