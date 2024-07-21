@@ -685,13 +685,13 @@ class WizardInstallerDialog(QtWidgets.QDialog):
 
         name: str = self.ui.nextBtn.text()
         if isinstance(widget, WizardInstallerSelectPage):
-            name = self._tr("Next")
+            name = self.tr("Next")
         elif isinstance(widget, WizardInstallerRequiresVersionPage):
-            name = self._tr("Install anyway")
+            name = self.tr("Install anyway")
         elif isinstance(widget, (WizardInstallerCancelPage, WizardInstallerErrorPage)):
             self.ui.nextBtn.setDisabled(True)
         else:
-            name = self._tr("Install")
+            name = self.tr("Install")
 
         self.ui.nextBtn.setText(name)
 
@@ -748,5 +748,5 @@ class WizardInstallerDialog(QtWidgets.QDialog):
         self._update_focus()
         return super().exec()
 
-    def _tr(self, value: str):
+    def tr(self, value: str):  # pyright: ignore[reportIncompatibleMethodOverride]
         return QApplication.translate("WizardInstallerDialog", value)

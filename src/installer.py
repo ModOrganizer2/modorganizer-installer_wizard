@@ -49,13 +49,13 @@ class WizardInstaller(mobase.IPluginInstallerSimple):
         return "BAIN Wizard Installer"
 
     def localizedName(self) -> str:
-        return self._tr("BAIN Wizard Installer")
+        return self.tr("BAIN Wizard Installer")
 
     def author(self):
         return "Holt59"
 
     def description(self):
-        return self._tr("Installer for BAIN archive containing wizard scripts.")
+        return self.tr("Installer for BAIN archive containing wizard scripts.")
 
     def version(self):
         return mobase.VersionInfo(1, 0, 2)
@@ -392,7 +392,7 @@ class WizardInstaller(mobase.IPluginInstallerSimple):
         else:
             return mobase.InstallResult.CANCELED
 
-    def _tr(self, value: str) -> str:
+    def tr(self, value: str) -> str:
         # we need this to translate string in Python. Check the common documentation
         # for more details
         return QApplication.translate("WizardInstaller", value)
