@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1">
   <context>
+    <name>WizardInstaller</name>
+    <message>
+      <location filename="installer.py" line="52" />
+      <source>BAIN Wizard Installer</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <location filename="installer.py" line="58" />
+      <source>Installer for BAIN archive containing wizard scripts.</source>
+      <translation type="unfinished" />
+    </message>
+  </context>
+  <context>
     <name>WizardInstallerComplete</name>
     <message>
       <location filename="ui\wizardinstallercomplete.ui" line="0" />
@@ -33,6 +46,22 @@
     <name>WizardInstallerDialog</name>
     <message>
       <location filename="ui\wizardinstallerdialog.ui" line="0" />
+      <location filename="dialog.py" line="688" />
+      <source>Next</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <location filename="dialog.py" line="690" />
+      <source>Install anyway</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <location filename="dialog.py" line="694" />
+      <source>Install</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <location filename="ui\wizardinstallerdialog.ui" line="0" />
       <source>BAIN Wizard Installer</source>
       <translation type="unfinished" />
     </message>
@@ -54,11 +83,6 @@
     <message>
       <location filename="ui\wizardinstallerdialog.ui" line="0" />
       <source>Back</source>
-      <translation type="unfinished" />
-    </message>
-    <message>
-      <location filename="ui\wizardinstallerdialog.ui" line="0" />
-      <source>Next</source>
       <translation type="unfinished" />
     </message>
     <message>
