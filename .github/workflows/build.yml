@@ -35,5 +35,5 @@ jobs:
       - name: Upload Installer Wizard Plugin artifact
         uses: actions/upload-artifact@master
         with:
-          name: installer_wizar
-          path: ./install/plugins/installer_wizard
+          name: installer_wizard
+          path: ./install/bin/plugins
