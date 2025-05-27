@@ -2,6 +2,7 @@
 This file is the entry point of the module and must contain a createPlugin()
 or createPlugins() function.
 """
+
 from __future__ import annotations
 
 import os
