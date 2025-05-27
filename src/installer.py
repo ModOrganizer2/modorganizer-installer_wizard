@@ -20,7 +20,6 @@ from .utils import make_ini_tweaks, merge_ini_tweaks
 
 
 class WizardInstaller(mobase.IPluginInstallerSimple):
-
     """
     This is the actual plugin. MO2 has two types of installer plugin, this one is
     "simple", i.e., it will work directly on the file-tree contained in the archive.
