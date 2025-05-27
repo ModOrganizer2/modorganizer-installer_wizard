@@ -14,17 +14,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - uses: actions/checkout@v4
-
-      - name: "Set environmental variables"
+      - name: Set environmental variables
         shell: bash
         run: |
           echo "VCPKG_ROOT=$VCPKG_INSTALLATION_ROOT" >> $GITHUB_ENV
 
+      - uses: actions/checkout@v4
+
       - name: Configure Installer Wizard Plugin build
         shell: pwsh
         run: |
-          cmake --preset vs2022-windows "-DCMAKE_INSTALL_PREFIX=install"
+          cmake --preset vs2022-windows "-DCMAKE_INSTALL_PREFIX=install" "-DVCPKG_MANIFEST_FEATURES=standalone"
 
       - name: Build Installer Wizard Plugin
         run: cmake --build vsbuild --config RelWithDebInfo
